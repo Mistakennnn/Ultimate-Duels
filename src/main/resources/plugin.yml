@@ -1,0 +1,33 @@
+name: UltimateDuels
+version: '${project.version}'
+main: me.mistakenn.ultimateduels.UltimateDuel
+api-version: '1.20'
+
+commands:
+  uhckit:
+    description: Gives the BuildUHC kit.
+    usage: /uhckit
+
+  swordkit:
+    description: Gives the FFA/Beast kit.
+    usage: /swordkit
+
+  axeKit:
+    description: Gives the Axe kit.
+    usage: /axekit
+
+  nethPotKit:
+    description: Gives the NethPot kit.
+    usage: /nethpotkit
+
+  potKit:
+    description: Gives the Pot kit.
+    usage: /potkit
+
+  smpKit:
+    description: Gives the SMP kit.
+    usage: /smpkit
+
+  lokadamage:
+    description: Toggles 33% damage buff.
+    usage: /lokadamage
