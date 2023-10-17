@@ -1,12 +1,8 @@
 me\mistakenn\ultimateduels\commands\lokaDamage.class
-me\mistakenn\ultimateduels\commands\kitsGive\smpKit.class
+me\mistakenn\ultimateduels\commands\Heal.class
 me\mistakenn\ultimateduels\listeners\PlayerJoinEventListener.class
-me\mistakenn\ultimateduels\UltimateDuel.class
-me\mistakenn\ultimateduels\commands\kitsGive\axeKit.class
-me\mistakenn\ultimateduels\commands\kitsGive\nethPot.class
-me\mistakenn\ultimateduels\commands\kitsGive\potKit.class
-me\mistakenn\ultimateduels\commands\kitsGive\UHCKit.class
 me\mistakenn\ultimateduels\listeners\EntityDamageByEntityListener.class
 me\mistakenn\ultimateduels\scoreboard\healthIndicators.class
-me\mistakenn\ultimateduels\commands\kitsGive\swordKit.class
+me\mistakenn\ultimateduels\UltimateDuel.class
 me\mistakenn\ultimateduels\listeners\EntityDamageListener.class
+me\mistakenn\ultimateduels\commands\KitsGive.class

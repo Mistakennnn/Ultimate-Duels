@@ -1,6 +1,7 @@
 package me.mistakenn.ultimateduels;
 
-import me.mistakenn.ultimateduels.commands.kitsGive.*;
+import me.mistakenn.ultimateduels.commands.Heal;
+import me.mistakenn.ultimateduels.commands.KitsGive;
 import me.mistakenn.ultimateduels.commands.lokaDamage;
 import me.mistakenn.ultimateduels.listeners.EntityDamageByEntityListener;
 import me.mistakenn.ultimateduels.listeners.EntityDamageListener;
@@ -11,12 +12,8 @@ public final class UltimateDuel extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        getCommand("uhckit").setExecutor(new UHCKit());
-        getCommand("swordkit").setExecutor(new swordKit());
-        getCommand("axekit").setExecutor(new axeKit());
-        getCommand("nethpotkit").setExecutor(new nethPot());
-        getCommand("potkit").setExecutor(new potKit());
-        getCommand("smpkit").setExecutor(new smpKit());
+        getCommand("kit").setExecutor(new KitsGive());
+        getCommand("heal").setExecutor(new Heal());
 
         lokaDamage lokaDamageInstance = new lokaDamage();
         getCommand("lokadamage").setExecutor(lokaDamageInstance);
