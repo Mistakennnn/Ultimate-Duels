@@ -6,7 +6,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
-public class lokaDamage implements CommandExecutor {
+public class LokaDamage implements CommandExecutor {
     public boolean lokadmg = false;
 
     @Override

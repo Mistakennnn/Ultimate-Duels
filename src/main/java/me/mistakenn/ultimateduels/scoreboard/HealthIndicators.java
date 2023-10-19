@@ -4,7 +4,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.scoreboard.*;
 
 
-public class healthIndicators {
+public class HealthIndicators {
 
     public void setHealthScoreboard(Player player) {
         Objective oob = player.getScoreboard().getObjective("opp-hp");

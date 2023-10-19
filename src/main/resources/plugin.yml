@@ -15,3 +15,7 @@ commands:
   lokadamage:
     description: Toggles 33% damage buff.
     usage: /lokadamage
+
+  defaultsaturation:
+    description: Sets default saturation on respawn and /heal.
+    usage: /defaultsaturation [amount]

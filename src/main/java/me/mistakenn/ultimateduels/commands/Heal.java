@@ -9,6 +9,11 @@ import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
 public class Heal implements CommandExecutor {
+    private final DefaultSaturation defaultSaturationInstance;
+
+    public Heal(DefaultSaturation defaultSaturationInstance) {
+        this.defaultSaturationInstance = defaultSaturationInstance;
+    }
 
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String s, @NotNull String[] args) {
@@ -18,7 +23,7 @@ public class Heal implements CommandExecutor {
         switch(args.length) {
             case 0:
                 p.setHealth(p.getMaxHealth());
-                p.setSaturation(5);
+                p.setSaturation(defaultSaturationInstance.defaultSaturation);
                 p.setFoodLevel(20);
                 p.sendMessage(ChatColor.YELLOW + "You have been healed!");
                 break;

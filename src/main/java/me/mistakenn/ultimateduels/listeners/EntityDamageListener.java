@@ -9,8 +9,6 @@ public class EntityDamageListener implements Listener {
     @EventHandler
     public void onEntityDamage(EntityDamageEvent e)
     {
-        System.out.println("Entity damaged");
-
         if (e.getEntity() instanceof Player)
         {
             Player p = (Player) e.getEntity();

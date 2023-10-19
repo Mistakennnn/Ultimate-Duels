@@ -1,6 +1,6 @@
 package me.mistakenn.ultimateduels.listeners;
 
-import me.mistakenn.ultimateduels.commands.lokaDamage;
+import me.mistakenn.ultimateduels.commands.LokaDamage;
 import org.bukkit.Material;
 import org.bukkit.Sound;
 import org.bukkit.entity.Player;
@@ -10,9 +10,9 @@ import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.inventory.ItemStack;
 
 public class EntityDamageByEntityListener implements Listener {
-    private final lokaDamage lokaDamageInstance;
+    private final LokaDamage lokaDamageInstance;
 
-    public EntityDamageByEntityListener(lokaDamage lokaDamageInstance) {
+    public EntityDamageByEntityListener(LokaDamage lokaDamageInstance) {
         this.lokaDamageInstance = lokaDamageInstance;
     }
 
