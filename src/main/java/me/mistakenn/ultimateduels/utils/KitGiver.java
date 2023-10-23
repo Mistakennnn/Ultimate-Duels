@@ -1,57 +1,19 @@
-package me.mistakenn.ultimateduels.commands;
+package me.mistakenn.ultimateduels.utils;
 
 import net.md_5.bungee.api.ChatColor;
-import org.bukkit.Bukkit;
 import org.bukkit.Material;
-import org.bukkit.command.Command;
-import org.bukkit.command.CommandExecutor;
-import org.bukkit.command.CommandSender;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.PotionMeta;
-import org.bukkit.potion.Potion;
 import org.bukkit.potion.PotionData;
 import org.bukkit.potion.PotionType;
-import org.jetbrains.annotations.NotNull;
 
-public class KitsGive implements CommandExecutor {
+public class KitGiver {
 
-    @Override
-    public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String s, @NotNull String[] args) {
-        Player p = (Player) sender;
-
-        switch (args.length) {
-            case 0:
-                p.sendMessage(ChatColor.RED + "Please specify what kit to give.");
-                p.sendMessage(ChatColor.RED + "Correct synthax: /kit (mode) (player)");
-                break;
-
-            case 1:
-                giveKit(args[0], p, p);
-                break;
-
-            case 2:
-                Player targetPlayer = Bukkit.getPlayer(args[1]);
-                if (targetPlayer != null && targetPlayer.isOnline()) {
-                    giveKit(args[0], targetPlayer, p);
-                } else {
-                    p.sendMessage(ChatColor.RED + "You need to give a valid online player as an argument!");
-                }
-                break;
-
-            default:
-                p.sendMessage(ChatColor.RED + "Don't give more than 2 arguments!");
-                p.sendMessage(ChatColor.RED + "Correct synthax: /kit <gamemode> [targetplayer]");
-                break;
-        }
-
-        return true;
-    }
-
-    public void giveKit(String argument, Player p, Player sender) {
+    public static void giveKit(String argument, Player p, Player sender) {
         PlayerInventory playerInventory = p.getInventory();
         ItemStack[] armorContents = new ItemStack[4];
         int[] healthPotSlots;
@@ -278,13 +240,13 @@ public class KitsGive implements CommandExecutor {
         }
     }
 
-    public void setItems(int[] slots, ItemStack item, PlayerInventory playerInventory) {
+    public static void setItems(int[] slots, ItemStack item, PlayerInventory playerInventory) {
         for (int slot : slots) {
             playerInventory.setItem(slot, item);
         }
     }
 
-    public ItemStack[] enchantItems(ItemStack[] items, Enchantment[] enchantments, int[] levels) {
+    public static ItemStack[] enchantItems(ItemStack[] items, Enchantment[] enchantments, int[] levels) {
         for (ItemStack item : items) {
             ItemMeta itemMeta = item.getItemMeta();
             for (int i = 0; i < enchantments.length; i++) {
@@ -295,7 +257,7 @@ public class KitsGive implements CommandExecutor {
         return items;
     }
 
-    public ItemStack[] enchantItems(ItemStack[] items, Enchantment enchantment, int level) {
+    public static ItemStack[] enchantItems(ItemStack[] items, Enchantment enchantment, int level) {
         for (ItemStack item : items) {
             ItemMeta itemMeta = item.getItemMeta();
             itemMeta.addEnchant(enchantment, level, true);
@@ -304,7 +266,7 @@ public class KitsGive implements CommandExecutor {
         return items;
     }
 
-    public ItemStack enchantItem(ItemStack item, Enchantment[] enchantments, int[] levels) {
+    public static ItemStack enchantItem(ItemStack item, Enchantment[] enchantments, int[] levels) {
         ItemMeta itemMeta = item.getItemMeta();
         for (int i = 0; i < enchantments.length; i++) {
             itemMeta.addEnchant(enchantments[i], levels[i], true);
@@ -313,14 +275,14 @@ public class KitsGive implements CommandExecutor {
         return item;
     }
 
-    public ItemStack enchantItem(ItemStack item, Enchantment enchantment, int level) {
+    public static ItemStack enchantItem(ItemStack item, Enchantment enchantment, int level) {
         ItemMeta itemMeta = item.getItemMeta();
         itemMeta.addEnchant(enchantment, level, true);
         item.setItemMeta(itemMeta);
         return item;
     }
 
-    public ItemStack createPotion(PotionType effect, boolean extended, boolean lvl2) {
+    public static ItemStack createPotion(PotionType effect, boolean extended, boolean lvl2) {
         ItemStack pot = new ItemStack(Material.SPLASH_POTION, 1);
         PotionMeta metaPot = (PotionMeta) pot.getItemMeta();
         metaPot.setBasePotionData(new PotionData(effect, extended, lvl2));
@@ -328,3 +290,5 @@ public class KitsGive implements CommandExecutor {
         return pot;
     }
 }
+
+

@@ -18,4 +18,4 @@ commands:
 
   defaultsaturation:
     description: Sets default saturation on respawn and /heal.
-    usage: /defaultsaturation [amount]
+    usage: /defaultsaturation <amount>
