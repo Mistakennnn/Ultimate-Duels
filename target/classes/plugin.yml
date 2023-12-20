@@ -8,6 +8,10 @@ commands:
     description: Give an entire kit to any player.
     usage: /kit <gamemode> [targetplayer]
 
+  duel:
+    description: Duel a player.
+    usage: /duel <targetplayer> [amount]
+
   heal:
     description: Heals a player.
     usage: /heal [targetplayer]

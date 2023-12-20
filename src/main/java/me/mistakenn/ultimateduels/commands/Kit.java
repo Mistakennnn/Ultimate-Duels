@@ -17,7 +17,7 @@ public class Kit implements CommandExecutor {
 
         switch (args.length) {
             case 0:
-                DuelsMenu.duelsMenu(p);
+                DuelsMenu.duelsMenu(p, false);
                 break;
 
             default:

@@ -1,3 +1,4 @@
+me\mistakenn\ultimateduels\listeners\PlayerDeathListener.class
 me\mistakenn\ultimateduels\commands\Heal.class
 me\mistakenn\ultimateduels\utils\DuelsMenu.class
 me\mistakenn\ultimateduels\UltimateDuel.class
@@ -7,6 +8,7 @@ me\mistakenn\ultimateduels\utils\KitGiver.class
 me\mistakenn\ultimateduels\listeners\PlayerJoinListener.class
 me\mistakenn\ultimateduels\listeners\EntityDamageByEntityListener.class
 me\mistakenn\ultimateduels\commands\Kit.class
+me\mistakenn\ultimateduels\commands\Duel.class
 me\mistakenn\ultimateduels\listeners\InventoryClickListener.class
 me\mistakenn\ultimateduels\listeners\EntityDamageListener.class
 me\mistakenn\ultimateduels\listeners\PlayerRespawnListener.class

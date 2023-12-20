@@ -10,9 +10,12 @@ import org.bukkit.inventory.meta.ItemMeta;
 
 public class DuelsMenu {
 
-    public static void duelsMenu(Player p)
+    public static void duelsMenu(Player p, boolean isForDuel)
     {
-        Inventory duelsMenu = Bukkit.createInventory(p, 9, ChatColor.BLUE + "Select a gamemode!");
+        String title;
+        if (isForDuel) { title = ChatColor.RED + "Select a gamemode!"; }
+        else { title = ChatColor.BLUE + "Select a gamemode!"; }
+        Inventory duelsMenu = Bukkit.createInventory(p, 9, title);
 
         makeAndAddItem(Material.DIAMOND_SWORD, "Sword", duelsMenu);
         makeAndAddItem(Material.DIAMOND_AXE, "Axe", duelsMenu);
