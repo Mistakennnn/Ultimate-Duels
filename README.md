@@ -6,7 +6,9 @@ To get the kits of each gamemode:
 
 /kit<br>
 This opens an inventory menu where you can click on a series of items which each indicates a kit you get given once you click on it.<br>
-Where gamemodes currently are Sword, Axe, Pot, NethPot, UHC, SMP.<br>
+Where gamemodes currently are Sword, Axe, Pot, NethPot, UHC, SMP.
+
+<br>
 ![image](https://github.com/Mistakennnn/Ultimate-Duels/assets/125143558/a4967d93-2899-43ec-a93a-bbffb3e3a411)
 
 # Another settings:<br>
